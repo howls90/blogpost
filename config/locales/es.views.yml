@@ -1,0 +1,6 @@
+es:
+  posts:
+    index:
+      edit_link: "Editar"
+      destroy_link: "Eliminar"
+      show_link: "Mostrar"
