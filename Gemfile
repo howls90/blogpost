@@ -36,6 +36,7 @@ gem 'mini_magick'
 gem 'devise'
 gem 'figaro'
 gem 'activeadmin'
+gem 'sidekiq'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

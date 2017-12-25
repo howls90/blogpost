@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    print User.all.first.name
     @posts = Post.where(user_id:current_user.id)
   end
 

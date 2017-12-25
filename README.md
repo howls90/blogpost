@@ -23,4 +23,6 @@ Things you may want to cover:
 
 * ...
 
-email,images,adminactive,users
+email,images,adminactive,users,Internationalization
+
+redis-server / bundle exec sidekiq
