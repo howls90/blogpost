@@ -9,8 +9,16 @@
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
+    <% if user_signed_in? %>
+      <%= render 'layouts/nav', user: @user %>
+    <% end %>
+  	
+    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
