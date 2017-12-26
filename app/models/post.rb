@@ -3,6 +3,10 @@ class Post < ApplicationRecord
 
 	has_many :comments
 
+	validates :title, presence: true
+	validates :header, presence: true, length: { in: 50..133 }
+	validates :body, presence: true
+
 	after_create :notify_users
 
 	def notify_users()
