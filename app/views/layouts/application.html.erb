@@ -6,19 +6,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
   </head>
 
   <body>
+
     <% if user_signed_in? %>
       <%= render 'layouts/nav', user: @user %>
     <% end %>
-  	
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
+    <p class="notice" style="position: absolute"><%= notice %></p>
+    <p class="alert" style="position: absolute" ><%= alert %></p>
     
-    <div class="container">
-      <%= yield %>
-    </div>
-    
+    <%= yield %>
+      
   </body>
 </html>

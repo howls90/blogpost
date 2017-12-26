@@ -1,31 +1,19 @@
-<p id="notice"><%= notice %></p>
+<%= render 'banner' %>
 
-<h1>Posts</h1>
+<div class="container">
+	<h1><%= t('.last_articles') %></h1>
+	<br>
+	<div class="row">
+	  <div class="row"> 
+	    <% @posts.each do |post| %>
+	      <% cache post do %>
+	        <%= render 'post', post: post  %>
+	      <%end%>
+	    <%end%> 
+	  </div>
+	</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	<br>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <% cache post do %>
-        <tr>
-          <td><%= post.title %></td>
-          <td><%= post.body %></td>
-          <td><%= link_to t('.show_link'), post %></td>
-          <td><%= link_to t('.edit_link'), edit_post_path(post) %></td>
-          <td><%= link_to t('.destroy_link'), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <%end%>
-        </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+	<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
+</div>
