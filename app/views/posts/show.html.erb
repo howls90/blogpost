@@ -3,33 +3,32 @@
 
 <div class="container">
   <h1><%= @post.title %></h1>
-
   <p><%= @post.body %></p>
-
-  <hr>
-
-  <h2>Comments</h2>
-  <% @post.comments.each do |comment| %> 
-    <p>
-      <strong>Comment:</strong>
-      <%= comment.body %>
-    </p>
-  <% end %>
-   
-  <h2>Add a comment:</h2>
-
-  <div class="form-group">
-    <%= form_for([ @post, @post.comments.build ]) do |form| %>
-      
-      <%= form.label :body %><br>
-      <%= form.text_area :body, class: 'form_control' %>
-      
-      <%= form.submit %>
-      
-    <% end %>
-  </div>
-
-  <%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' %> |
-  <%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
-
 </div>
+
+<%= render 'author', author: @post.user %>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %> 
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.body %>
+  </p>
+<% end %>
+ 
+<h2>Add a comment:</h2>
+
+<div class="form-group">
+  <%= form_for([ @post, @post.comments.build ]) do |form| %>
+    
+    <%= form.label :body %><br>
+    <%= form.text_area :body, class: 'form_control' %>
+    
+    <%= form.submit %>
+    
+  <% end %>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post), class: 'btn btn-primary' %> |
+<%= link_to 'Back', posts_path, class: 'btn btn-primary' %>
+
