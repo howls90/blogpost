@@ -14,10 +14,8 @@
 
   <body>
 
-    <% if user_signed_in? %>
-      <%= render 'layouts/nav', user: @user %>
-    <% end %>
-
+    <%= render 'layouts/nav', user: @user %>
+    
     <p class="notice" style="position: absolute"><%= notice %></p>
     <p class="alert" style="position: absolute" ><%= alert %></p>
 
@@ -25,9 +23,7 @@
     
     <%= yield %>
 
-    <% if user_signed_in? %>
-      <%= render 'layouts/footer', user: @user %>
-    <% end %>
+    <%= render 'layouts/footer', user: @user %>
       
   </body>
 </html>

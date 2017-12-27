@@ -1,12 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :except => [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    print User.all.first.name
-    @posts = Post.where(user_id:current_user.id)
+    @posts = Post.order("created_at desc")
   end
 
   # GET /posts/1

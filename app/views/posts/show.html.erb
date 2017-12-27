@@ -11,8 +11,10 @@
 		<%= @post.updated_at.strftime('%Y/%m/%d') %> by <%= @post.user.name %>
 	</h6>
 
-	<% @post.topic_list.each do |topic| %>
-		<span class="label"><%= topic %></span>
+	<% if @post.topics? %>
+		<% @post.topic_list.each do |topic| %>
+			<span class="label"><%= topic %></span>
+		<% end %>
 	<% end %>
 
 	<hr>
