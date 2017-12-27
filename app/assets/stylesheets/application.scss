@@ -15,6 +15,38 @@
  */
  @import "bootstrap";
 
+ .alert-right{
+ 	right: 0;
+ 	padding:0 20px;
+ 	position: absolute;
+ 	margin-top: 30px
+ }
+
+ .nav-dropdownitem{
+ 	font-size: 18px;
+ 	background-color: white
+ }
+
+ .dropdown-menu h6{
+ 	float: left;
+ 	margin-left: 10px
+ }
+
+ .dropdown-menu-features {
+ 	min-width: 300px;
+ 	background-color: #e9ecef;
+ 	padding-bottom: 0px
+ }
+
+ .dropdown-avatar{
+ 	border-radius:50%; 
+ 	width:70px;
+ 	height:70px;
+ 	margin-left:10px;
+ 	float:left;
+ 	margin-bottom: 10px;
+ }
+
  .label{
  	background-color: #007bff;
  	border-color: #007bff;

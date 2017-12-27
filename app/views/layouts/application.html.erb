@@ -16,14 +16,30 @@
 
     <%= render 'layouts/nav', user: @user %>
     
-    <p class="notice" style="position: absolute"><%= notice %></p>
-    <p class="alert" style="position: absolute" ><%= alert %></p>
+    <% if flash[:notice] %>
+      <div class="alert-right">
+        <div class="alert alert-block alert-info alert-dismissable">
+            <button type="button" id="close-alert" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <%= notice %>
+        </div>
+      </div>
+    <% end %>
+
+    <p class="alert alert" style="position: absolute" ><%= alert %></p>
 
     <div style="margin-top: 55px"></div>
     
     <%= yield %>
 
     <%= render 'layouts/footer', user: @user %>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        setTimeout(function() {
+          $("#close-alert").trigger('click');
+        }, 5000);
+      });
+    </script>
       
   </body>
 </html>

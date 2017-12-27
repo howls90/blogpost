@@ -16,3 +16,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+window.onload = function() {
+    document.getElementById('add_topic').onclick = function () {
+        alert('hola mundo!');
+    }
+}
