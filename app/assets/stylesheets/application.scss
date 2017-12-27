@@ -14,3 +14,9 @@
  *= require devise_user.scss
  */
  @import "bootstrap";
+
+.navbar-shadow{
+	-webkit-box-shadow: -4px 15px 16px -6px rgba(0,0,0,0.39);
+	-moz-box-shadow: -4px 15px 16px -6px rgba(0,0,0,0.39);
+	box-shadow: -4px 15px 16px -6px rgba(0,0,0,0.39);
+}

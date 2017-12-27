@@ -1,5 +1,5 @@
 <div class="col-xs-12 col-sm-3 col-md-3">
-  <%= link_to image_tag("http://wanderluxe.theluxenomad.com/wp-content/uploads/2014/10/http-www.urchinbali.comgallery.jpg", class: "img-responsive img-box img-thumbnail"), post %> 
+  <%= link_to image_tag(post.image.url, class: "img-responsive img-box img-thumbnail"), post %> 
 </div> 
 <div class="col-xs-12 col-sm-9 col-md-9">
   <div class="list-group">
@@ -11,7 +11,7 @@
         </small>
         <h3><%= link_to post.title, post, class: "title" %></h3>
         <h6 class="category">Web Developing</h6>
-        <p><%= post.body %></p>
+        <p><%= post.header %></p>
         <small>
           <span><i class="fa fa-comment"></i> <a target="_blank" alt="comments" title="comment"><%= post.comments.size %> | ruby on rails | ruby</a></span>
         </small>
