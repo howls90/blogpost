@@ -2,7 +2,23 @@
 <%= render 'post_banner', post: @post   %>
 
 <div class="container" style="margin-bottom: 30px">
-  <%= markdown(@post.body) %>
+
+	<span style="float: right">
+		<i class="fa fa-comment"></i> <a target="_blank" alt="comments" title="comment"><%= @post.comments.size %></a>
+	</span>
+
+	<h6>
+		<%= @post.updated_at.strftime('%Y/%m/%d') %> by <%= @post.user.name %>
+	</h6>
+
+	<% @post.topic_list.each do |topic| %>
+		<span class="label"><%= topic %></span>
+	<% end %>
+
+	<hr>
+
+  	<%= markdown(@post.body) %>
+
 </div>
 
 <%= render 'author', author: @post.user %>

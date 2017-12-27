@@ -35,6 +35,13 @@
     <br>
 
     <div class="field">
+      <%= f.label :topics %>
+      <%= f.text_field :topics, class: 'form-control' %>
+    </div>
+
+    <br>
+
+    <div class="field">
       <%= f.label :body %>
       <%= f.text_area :body, class: 'form-control', rows: 15, id: "editor" %>
     </div>
@@ -42,7 +49,7 @@
     <br>
 
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Crear", :class=> "btn btn-primary" %>
     </div>
   <% end %>
 </div>
