@@ -20,7 +20,6 @@
 var topics = []
 
 
-
 window.onload = function() {
     document.getElementById('add_topic').onclick = function () {
     	var topic = $("#topics").val();

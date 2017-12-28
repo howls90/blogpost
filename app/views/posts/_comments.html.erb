@@ -16,21 +16,25 @@
 
 <div class="jumbotron" style="margin-bottom: 0px">
   	<div class="container">
-		<h2>Add a comment:</h2>
+  		<% if user_signed_in? %>
+			<h2>Add a comment:</h2>
 
-		<div class="form-group">
-		  <%= form_for([ @post, @post.comments.build ]) do |f| %>
-		    
-		    <div class="field">
-		      <%= f.label :body %>
-		      <%= f.text_area :body, class: 'form-control' %>
-		    </div>
+			<div class="form-group">
+			  <%= form_for([ @post, @post.comments.build ]) do |f| %>
+			    
+			    <div class="field">
+			      <%= f.label :body %>
+			      <%= f.text_area :body, class: 'form-control' %>
+			    </div>
 
-		    <br>
-		    
-		    <%= f.submit "Crear", :class => 'btn btn-primary' %>
-		    
-		  <% end %>
-		</div>
+			    <br>
+			    
+			    <%= f.submit "Crear", :class => 'btn btn-primary' %>
+			    
+			  <% end %>
+			</div>
+		<% else %>
+			<h2 style="text-align: center"><i class="fa fa-comment"></i>  <a href="/users/sign_in"> Log in</a> or <a href="/users/sign_up"> Sign up</a> to comment this post !</h2>
+		<% end %>
 	</div>
 </div>
