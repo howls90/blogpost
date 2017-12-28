@@ -35,6 +35,6 @@ window.onload = function() {
 function submit_post()
 {   
 	$('#topics').val(topics);
-   	$("#new_post").submit();
+   	$(".new_post").submit();
 }
 
