@@ -21,7 +21,7 @@
 
         <h3><%= link_to post.title, post, class: "title" %></h3>
 
-        <h6 class="category" >Web Developing</h6>
+        <h6 class="category" ><%= post.category.name %></h6>
         
         <% post.topic_list.each do |topic| %>
           <span class="label_min" ><%= topic %></span>

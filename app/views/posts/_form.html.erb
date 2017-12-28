@@ -36,7 +36,7 @@
 
     <div class="field">
       <%= f.label :category %>
-      <%= select_tag(:topics, options_for_select([['Lisbon', 1], ['Madrid', 2]]), class: 'form-control') %>
+      <%= f.select :category, options_for_select(post.categories), {} ,{:class => "form-control"} %>
     </div>
 
     <br>

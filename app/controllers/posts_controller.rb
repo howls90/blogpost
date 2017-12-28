@@ -27,6 +27,11 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
 
+    if Category.where(:id => params[:post][:category]).any?
+      @category = Category.find(params[:post][:category])
+      @post.category_id = @category.id
+    end
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -70,6 +75,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body, :header, :image, :topics, :category )
+      params.require(:post).permit(:title, :body, :header, :image, :topics)
     end
 end

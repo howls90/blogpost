@@ -9,6 +9,7 @@ class Post < ApplicationRecord
 	validates :topics, presence: true
 	validates :header, presence: true, length: { in: 50..200 }
 	validates :body, presence: true
+	validates :category, presence: true
 
 	after_create :notify_users
 
@@ -18,5 +19,14 @@ class Post < ApplicationRecord
 
 	def topic_list()
 		return self.topics.split(',')
+	end
+
+	def categories()
+		list = []
+		Category.all.each do |c|
+			list.append([c.name, c.id])
+		end
+
+		return list
 	end
 end
