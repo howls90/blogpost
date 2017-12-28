@@ -7,7 +7,7 @@
     <ul class="navbar-nav">
       <% @categories.each do |category|%>
         <li class="nav-item">
-          <a class="nav-link" href="/posts"><%= category.name %></a>
+          <%= link_to category.name, category, class: "nav-link" %>
         </li>
       <% end %>
     </ul>

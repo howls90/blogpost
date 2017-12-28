@@ -1,4 +1,4 @@
-<%= render 'banner' %>
+<%= render 'posts/banner' %>
 
 <div class="container" style="margin-bottom: 40px">
 	<h1><%= t('.last_articles') %></h1>
@@ -7,7 +7,7 @@
 	  <div class="row"> 
 	    <% @posts.each do |post| %>
 	      <% cache post do %>
-	        <%= render 'post', post: post  %>
+	        <%= render 'posts/post', post: post  %>
 	      <%end%>
 	    <%end%> 
 	  </div>
