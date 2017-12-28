@@ -17,8 +17,25 @@
 //= require turbolinks
 //= require_tree .
 
+var topics = []
+
+
+
 window.onload = function() {
     document.getElementById('add_topic').onclick = function () {
-        alert('hola mundo!');
+    	var topic = $("#topics").val();
+    	if(topic != "") {
+    		topics.push(topic);
+	    	$('#topics').val('');
+	        $('#mylabels').append('<span class="label_min" style="margin-left:5px" >'+topic+'</span>');
+    	}
     }
 }
+
+
+function submit_post()
+{   
+	$('#topics').val(topics);
+   	$("#new_post").submit();
+}
+

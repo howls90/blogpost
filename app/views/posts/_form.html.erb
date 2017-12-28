@@ -36,10 +36,15 @@
 
     <div class="field">
       <%= f.label :topics %>
-      <%= f.text_field :topics, class: 'form-control' %>
+      <%= f.text_field :topics, class: 'form-control', id: "topics" %>
     </div>
 
-    <button type="button" id="add_topic" class="btn btn-primary">Add</button>
+    <br>
+
+    <button type="button" id="add_topic" class="btn btn-primary" style="float:left;margin-right: 10px">Add</button>
+    <div id="mylabels">
+    </div>
+    
 
     <br><br>
 
@@ -50,9 +55,8 @@
 
     <br>
 
-    <div class="actions">
-      <%= f.submit "Crear", :class=> "btn btn-primary" %>
-    </div>
+    <button type="button" id="add_topic" onclick="submit_post()" class="btn btn-primary">Crear</button>
+
   <% end %>
 </div>
 

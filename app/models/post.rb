@@ -16,6 +16,6 @@ class Post < ApplicationRecord
 	end
 
 	def topic_list()
-		return self.topics.split(' | ')
+		return self.topics.split(',')
 	end
 end
