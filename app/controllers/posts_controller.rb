@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :check_author, only: [:edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -76,5 +77,12 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:title, :body, :header, :image, :topics)
+    end
+
+    # Check is current user is an author
+    def check_author
+      if current_user.is_author != true
+        redirect_to root_path
+      end
     end
 end

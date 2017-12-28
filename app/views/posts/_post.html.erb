@@ -12,7 +12,7 @@
           <i class="fa fa-pencil" aria-hidden="true"></i> <%= post.user.name %>
         </small>
 
-        <% if user_signed_in? %>
+        <% if user_signed_in? && current_user.is_author %>
           <div class="btn-group-vertical" style="float: right">
             <%= link_to t('.edit_link'), edit_post_path(post), class: "btn btn-warning", style: "color: white;margin-bottom: 5px" %>
             <%= link_to t('.destroy_link'), post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>

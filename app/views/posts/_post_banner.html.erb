@@ -2,7 +2,7 @@
   <div class="container">
     <h1><%= post.title %></h1>
     <p><%= post.header %></p>
-    <% if user_signed_in? %>
+    <% if user_signed_in? && current_user.is_author %>
 		<%= link_to 'Edit', edit_post_path(post), style: "color: white",class: "btn btn-warning" %> 
 		<%= link_to t('.destroy_link'), post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
 	<% end %>

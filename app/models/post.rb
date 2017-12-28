@@ -9,6 +9,7 @@ class Post < ApplicationRecord
 	validates :topics, presence: true
 	validates :header, presence: true, length: { in: 50..200 }
 	validates :body, presence: true
+	validates :image, presence: true
 	validates :category, presence: true
 
 	after_create :notify_users

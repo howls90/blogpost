@@ -15,7 +15,7 @@
 
 	<br>
 
-	<% if user_signed_in? %>
+	<% if user_signed_in? && current_user.is_author %>
 		<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
 	<% end %>
 </div>
