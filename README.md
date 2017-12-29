@@ -34,3 +34,6 @@ bundle exec sidekiq
 rails db:migrate db:seed
 rails s
 ```
+
+## License
+This software is licensed under the MIT License.
