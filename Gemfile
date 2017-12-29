@@ -31,14 +31,23 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Upload images
 gem 'carrierwave'
+# Scale images
 gem 'mini_magick'
+# Manage users permissions
 gem 'devise'
+# Define envionment variables
 gem 'figaro'
+# Adminstration panel
 gem 'activeadmin'
+# Manage job queues
 gem 'sidekiq'
+# Bootstrap gem 
 gem 'bootstrap', '~> 4.0.0.beta2.1'
+# Markdown 
 gem 'redcarpet'
+# Active admin theme
 gem 'active_skin'
 
 

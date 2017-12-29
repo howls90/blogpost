@@ -1,7 +1,9 @@
-# README
+# MyblogPost
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+
+## Features
 
 Things you may want to cover:
 
@@ -25,6 +27,11 @@ Things you may want to cover:
 
 email,images,adminactive,users,Internationalization
 
-redis-server / bundle exec sidekiq
-rails db:migrate db:seed
-rails s
+# Get started
+
+```
+	redis-server
+	bundle exec sidekiq
+	rails db:migrate db:seed
+	rails s
+```
