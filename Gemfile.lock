@@ -24,6 +24,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_skin (0.0.12)
     activeadmin (1.2.0)
       arbre (>= 1.1.1)
       coffee-rails
@@ -147,8 +148,6 @@ GEM
       activerecord (>= 3.0)
     popper_js (1.12.9)
     puma (3.11.0)
-    pygments.rb (1.2.1)
-      multi_json (>= 1.0.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -246,6 +245,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_skin
   activeadmin
   bcrypt (~> 3.1.7)
   bootstrap (~> 4.0.0.beta2.1)
@@ -259,7 +259,6 @@ DEPENDENCIES
   listen (~> 3.0.5)
   mini_magick
   puma (~> 3.0)
-  pygments.rb
   rails (~> 5.0.6)
   redcarpet
   sass-rails (~> 5.0)
