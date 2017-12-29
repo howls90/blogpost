@@ -26,3 +26,5 @@ Things you may want to cover:
 email,images,adminactive,users,Internationalization
 
 redis-server / bundle exec sidekiq
+rails db:migrate db:seed
+rails s
