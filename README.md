@@ -1,37 +1,36 @@
 # MyblogPost
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The MyblogPost aim is to provide a web app to manage a blog (Posts, Comments, Users, Categories,etc). It was build using the framework Ruby on Rails release 5.0.6 with Bootstrap v4. 
 
 ## Features
 
-Things you may want to cover:
+* Handle Posts and comments
 
-* Ruby version
+* Email senders
 
-* System dependencies
+* User administration (Views, Author and Admin)
 
-* Configuration
+* Internationalization (I18n)
 
-* Database creation
+* Images Upload
 
-* Database initialization
+* Job queues
 
-* How to run the test suite
+* Views caching
 
-* Services (job queues, cache servers, search engines, etc.)
+* Markdown editor
 
-* Deployment instructions
+* Bootstrap views
 
-* ...
+* Posts Filtering
 
-email,images,adminactive,users,Internationalization
+## Get started
 
-# Get started
+Go to root folder and type the following commmands:
 
 ```
-	redis-server
-	bundle exec sidekiq
-	rails db:migrate db:seed
-	rails s
+redis-server
+bundle exec sidekiq
+rails db:migrate db:seed
+rails s
 ```
