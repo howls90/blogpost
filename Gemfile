@@ -51,6 +51,9 @@ gem 'redcarpet'
 gem 'active_skin'
 # RestFull API security
 gem 'knock'
+# Omniauth
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 
 # Use Capistrano for deployment

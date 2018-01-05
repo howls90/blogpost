@@ -24,9 +24,19 @@ The MyblogPost aim is to provide a web app to manage a blog (Posts, Comments, Us
 
 * Posts Filtering
 
+* RestFull API with JWT
+
 ## Get started
 
-Go to root folder and type the following commmands:
+Execute the command ```bundle exec figaro install``` in the root folder and introduce the credentials for facebook. Example:
+
+```
+FACEBOOK_KEY : "<key>"
+FACEBOOK_SECRET: "<secret>"
+
+```
+
+Then execute the following commmands:
 
 ```
 redis-server
