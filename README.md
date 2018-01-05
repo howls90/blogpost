@@ -26,6 +26,8 @@ The MyblogPost aim is to provide a web app to manage a blog (Posts, Comments, Us
 
 * RestFull API with JWT
 
+* Omniauth
+
 ## Get started
 
 Execute the command ```bundle exec figaro install``` in the root folder and introduce the credentials for facebook. Example:
