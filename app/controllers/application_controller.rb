@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-  before_action :set_categories		
+  before_action :set_categories	
   protect_from_forgery with: :exception
-  before_action :configure_devise_params, if: :devise_controller?
+  before_action :configure_devise_params, if: :devise_controller? 
 
   def configure_devise_params
   	devise_parameter_sanitizer.permit(:sign_up) do |user|
@@ -12,4 +12,5 @@ class ApplicationController < ActionController::Base
   def set_categories
       @categories = Category.all
     end
+
 end

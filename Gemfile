@@ -49,6 +49,8 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'redcarpet'
 # Active admin theme
 gem 'active_skin'
+# RestFull API security
+gem 'knock'
 
 
 # Use Capistrano for deployment
